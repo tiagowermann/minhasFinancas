@@ -31,6 +31,11 @@
 		    <groupId>org.springframework.boot</groupId>					<!-- Módulo Spring Boot Data JPA-->
 		    <artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>				<!-- Spring boot devtools  //  Live reload (Reestartar qualquer alteração)-->
+		</dependency>
 
 		<dependency>
 			<groupId>org.postgresql</groupId> 							<!-- Drive de conexão com o postgresql-->
