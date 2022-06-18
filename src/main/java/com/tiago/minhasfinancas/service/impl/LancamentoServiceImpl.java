@@ -74,27 +74,27 @@ public class LancamentoServiceImpl implements LancamentoService {
 	@Override
 	public void validar(Lancamento lancamento) {
 		if(lancamento.getDescricao() == null || lancamento.getDescricao().trim().equals("")) {
-			throw new RegraNegocioException("Informe uma Descrição válida.");
+			throw new RegraNegocioException("Informe uma Descrição Válida.");
 		}
 		
 		if(lancamento.getMes() == null || lancamento.getMes() <1 || lancamento.getMes() > 12) {
-			throw new RegraNegocioException("Informe um Mês vaálido.");
+			throw new RegraNegocioException("Informe um Mês Válido.");
 		}
 		
 		if(lancamento.getAno() == null || lancamento.getAno().toString().length() != 4) {
-			throw new RegraNegocioException("Informe um Ano válido.");
+			throw new RegraNegocioException("Informe um Ano Válido.");
 		}
 		
 		if(lancamento.getUsuario() == null || lancamento.getUsuario().getId() == null) {
-			throw new RegraNegocioException("Informe um Usuário.");
+			throw new RegraNegocioException("Informe um Usuário Válido.");
 		}
 		
 		if(lancamento.getValor() == null || lancamento.getValor().compareTo(BigDecimal.ZERO) < 1) {
-			throw new RegraNegocioException("Informe um Valor válido.");
+			throw new RegraNegocioException("Informe um Valor Válido.");
 		}
 		
 		if(lancamento.getTipo() == null ) {
-			throw new RegraNegocioException("Informe um Tipo de Lancamento.");
+			throw new RegraNegocioException("Informe um Tipo de Lancamento Válido.");
 		}
 		
 	}

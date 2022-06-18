@@ -10,7 +10,6 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
@@ -18,7 +17,7 @@ import com.tiago.minhasfinancas.model.entity.Usuario;
 
 //@SpringBootTest
 @ExtendWith(SpringExtension.class)
-//@ActiveProfiles("test")
+@ActiveProfiles("test")
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)
 public class UsuarioRepositoryTest {
@@ -30,7 +29,7 @@ public class UsuarioRepositoryTest {
 	TestEntityManager entityManager; 					//entityManager É A CLASSE RESPONSÁVEL POR FAZER O SALVAMETO, DELETAR E ETC DO BANCO DE DADOS.
 	
 	@Test
-	public void deveVerificarAExistenciaDeUmEmail() {
+	public void deveVerificarAExistenciaDeUmEmail() { //ok
 		//cenário
 		Usuario usuario = criarUsuario();
 		entityManager.persist(usuario);
@@ -64,7 +63,7 @@ public class UsuarioRepositoryTest {
 	
 	
 	@Test
-	public void devePesistirUmUsuarioNaBaseDeDados() {
+	public void devePesistirUmUsuarioNaBaseDeDados() { //ok
 		//cenário
 		Usuario usuario =  criarUsuario();	
 		//ação/ecxecução

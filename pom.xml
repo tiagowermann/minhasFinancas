@@ -45,7 +45,6 @@
 		<dependency>
 		    <groupId>com.h2database</groupId> 							<!-- Banco de dados em memória -->
     		<artifactId>h2</artifactId>
-    		<scope>runtime</scope>
 		</dependency>
 		
 		<dependency>
